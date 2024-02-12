@@ -10,6 +10,7 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h1 class="">Expense Tracker</h1>
@@ -18,14 +19,18 @@
       <h1 id="Balance">0.00 Tk</h1>
     </div>
     <div class="inc-exp-container">
-      <div>
-        <h4>Income</h4>
-        <p id="money-plus" class="money plus">+ 0.00 Tk</p>
-      </div>
+      <div class="card ">
+        <div class="d-flex p-3">
+          <div class="p-3">
+            <h4>Income</h4>
+            <p id="money-plus" class="money plus">+ 0.00 Tk</p>
+          </div>
 
-      <div>
-        <h4>Expenses</h4>
-        <p id="money-minus" class="money minus">- 0.00 Tk</p>
+          <div class="p-3">
+            <h4>Expenses</h4>
+            <p id="money-minus" class="money minus">- 0.00 Tk</p>
+          </div>
+        </div>
       </div>
 
       <h3>History</h3>
@@ -38,19 +43,21 @@
 
       <h3>Add new Transaction</h3>
       <form id="form">
-        <div class="form-control">
-          <label for="text">Text</label>
-          <input type="text" id="text" placeholder="Enter Text..." />
+        <div class="form-controll">
+          <label for="text" class="form-label ">Text</label>
+          <input type="text" id="text" class="form-label form-control" placeholder="Enter Text..." />
         </div>
 
-        <div class="form-control">
-          <label for="amount"
+        <div class="form-controll">
+          <label for="amount" 
             >Amount <br />
             (negative - expense , positive - income)
-          </label>
+          </label><input type="number" id="amount" class="form-label form-control" placeholder="Add amount...." />
+          <button class="btn btn-secondary">Add Transaction</button>
         </div>
-        <input type="number" id="amount" placeholder="Add amount...." />
+        
       </form>
+
     </div>
 
     <script
